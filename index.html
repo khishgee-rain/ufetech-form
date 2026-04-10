@@ -52,7 +52,7 @@
       position:fixed;
       inset:0;
       background-image: url("./ufetech_bg.png");
-      background-size: contain;
+      background-size: 100% 100%;
       background-position: center;
       background-repeat: no-repeat;
       filter: none;
@@ -78,14 +78,7 @@
       animation: fall var(--duration, 10s) linear infinite;
       animation-delay: var(--delay, 0s);
       top: var(--start, -20%);
-    }
-
-    .bg-logo.left{
-      left: var(--x, 3vw);
-    }
-
-    .bg-logo.right{
-      right: var(--x, 3vw);
+      left: var(--x, 50vw);
     }
 
     /* vignette + noise-ish look */
@@ -359,8 +352,12 @@
     }
 
     @keyframes fall{
-      0%{ transform: translateY(0); }
-      100%{ transform: translateY(140vh); }
+      0%{
+        transform: translate(-50%, 0) rotate(var(--rotate-start, -8deg));
+      }
+      100%{
+        transform: translate(calc(-50% + var(--drift, 0px)), 140vh) rotate(var(--rotate-end, 8deg));
+      }
     }
   </style>
 </head>
@@ -368,12 +365,15 @@
 <body>
   <div class="bg" aria-hidden="true"></div>
   <div class="bg-logos" aria-hidden="true">
-    <img class="bg-logo left" src="./ufetech_logo_white.png" alt="" style="--start:-30%; --size:140px; --delay:-2.4s; --duration:11s;">
-    <img class="bg-logo left" src="./ufetech_logo_white.png" alt="" style="--start:-18%; --size:120px; --delay:-6.1s; --duration:12.5s;">
-    <img class="bg-logo left" src="./ufetech_logo_white.png" alt="" style="--start:-8%; --size:110px; --delay:-9.3s; --duration:13.2s;">
-    <img class="bg-logo right" src="./ufetech_logo_white.png" alt="" style="--start:-28%; --size:150px; --delay:-3.2s; --duration:11.4s;">
-    <img class="bg-logo right" src="./ufetech_logo_white.png" alt="" style="--start:-16%; --size:120px; --delay:-7.7s; --duration:12.1s;">
-    <img class="bg-logo right" src="./ufetech_logo_white.png" alt="" style="--start:-6%; --size:105px; --delay:-10.4s; --duration:13.6s;">
+    <img class="bg-logo" src="./ufetech_logo_white.png" alt="" style="--x:4vw; --start:-32%; --size:118px; --delay:-2.4s; --duration:12.2s; --drift:-24px; --rotate-start:-10deg; --rotate-end:8deg;">
+    <img class="bg-logo" src="./ufetech_logo_white.png" alt="" style="--x:15vw; --start:-14%; --size:96px; --delay:-8.6s; --duration:14.8s; --drift:22px; --rotate-start:7deg; --rotate-end:-9deg;">
+    <img class="bg-logo" src="./ufetech_logo_white.png" alt="" style="--x:27vw; --start:-24%; --size:108px; --delay:-5.3s; --duration:11.6s; --drift:-18px; --rotate-start:-6deg; --rotate-end:10deg;">
+    <img class="bg-logo" src="./ufetech_logo_white.png" alt="" style="--x:38vw; --start:-10%; --size:92px; --delay:-11.1s; --duration:15.1s; --drift:28px; --rotate-start:9deg; --rotate-end:-7deg;">
+    <img class="bg-logo" src="./ufetech_logo_white.png" alt="" style="--x:52vw; --start:-28%; --size:138px; --delay:-3.9s; --duration:12.8s; --drift:-14px; --rotate-start:-8deg; --rotate-end:6deg;">
+    <img class="bg-logo" src="./ufetech_logo_white.png" alt="" style="--x:64vw; --start:-6%; --size:102px; --delay:-9.2s; --duration:13.9s; --drift:18px; --rotate-start:6deg; --rotate-end:-8deg;">
+    <img class="bg-logo" src="./ufetech_logo_white.png" alt="" style="--x:76vw; --start:-20%; --size:114px; --delay:-6.7s; --duration:11.9s; --drift:-26px; --rotate-start:-7deg; --rotate-end:9deg;">
+    <img class="bg-logo" src="./ufetech_logo_white.png" alt="" style="--x:88vw; --start:-30%; --size:98px; --delay:-12.3s; --duration:14.4s; --drift:20px; --rotate-start:8deg; --rotate-end:-6deg;">
+    <img class="bg-logo" src="./ufetech_logo_white.png" alt="" style="--x:95vw; --start:-12%; --size:90px; --delay:-4.8s; --duration:13.2s; --drift:-16px; --rotate-start:-5deg; --rotate-end:7deg;">
   </div>
   <div class="wrap">
     <main class="card" role="main" aria-label="Оюутны хүсэлтийн маягтууд">
@@ -386,6 +386,34 @@
 
       <section class="content">
         <ul class="list">
+          <li>
+            <a class="item" href="https://ufenu.sharepoint.com/:l:/s/ApprovalSis/JAAWOoiLx9hFRJMMX9XGSi72AV4ymT940sabZcAiFiORrlg?nav=MGUzM2RlZTAtMzdjZi00MTY1LWFkOTctZDc1ODllN2JiODQ5" target="_blank" rel="noopener">
+              <div class="left">
+                <div class="icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-6z" stroke="rgba(31,63,166,.95)" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M14 2v6h6" stroke="rgba(31,63,166,.95)" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M8 14h8" stroke="rgba(31,63,166,.75)" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M12 11v6" stroke="rgba(31,63,166,.75)" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="meta">
+                  <div class="label">Урт хугацаанд чөлөө авах хүсэлт</div>
+                  <div class="hint">Өргөдлийн маягт</div>
+                </div>
+              </div>
+              <div class="right">
+                <span class="tag">Маягт</span>
+                <span class="arrow" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12h12" stroke="rgba(15,23,42,.80)" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M13 6l6 6-6 6" stroke="rgba(15,23,42,.80)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+            </a>
+          </li>
+
           <li>
             <a class="item" href="https://ufenu.sharepoint.com/:l:/s/ApprovalSis/JADUnzVrkQj9RYhkyPqbOyABAdjl3A5XN1DbeDfvO7DjFcc?nav=YjE3NTJmZjMtNmNiMi00OTgwLTlmYzctODZmYmFkYmJjYTAz" target="_blank" rel="noopener">
               <div class="left">
@@ -498,33 +526,6 @@
             </a>
           </li>
 
-          <li>
-            <a class="item" href="https://ufenu.sharepoint.com/:l:/s/ApprovalSis/JAAWOoiLx9hFRJMMX9XGSi72AV4ymT940sabZcAiFiORrlg?nav=MGUzM2RlZTAtMzdjZi00MTY1LWFkOTctZDc1ODllN2JiODQ5" target="_blank" rel="noopener">
-              <div class="left">
-                <div class="icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                    <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-6z" stroke="rgba(31,63,166,.95)" stroke-width="2" stroke-linejoin="round"/>
-                    <path d="M14 2v6h6" stroke="rgba(31,63,166,.95)" stroke-width="2" stroke-linejoin="round"/>
-                    <path d="M8 14h8" stroke="rgba(31,63,166,.75)" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M12 11v6" stroke="rgba(31,63,166,.75)" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                </div>
-                <div class="meta">
-                  <div class="label">Урт хугацаанд чөлөө авах хүсэлт</div>
-                  <div class="hint">Өргөдлийн маягт</div>
-                </div>
-              </div>
-              <div class="right">
-                <span class="tag">Маягт</span>
-                <span class="arrow" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12h12" stroke="rgba(15,23,42,.80)" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M13 6l6 6-6 6" stroke="rgba(15,23,42,.80)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-              </div>
-            </a>
-          </li>
         </ul>
 
         <div class="note">© UFE Tech — 2026.</div>
@@ -533,4 +534,3 @@
   </div>
 </body>
 </html>
-
